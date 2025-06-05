@@ -1,4 +1,4 @@
-﻿using Microsoft.FSharp.Core;
+using Microsoft.FSharp.Core;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ namespace Riverside.Railways;
 /// </remarks>
 /// <typeparam name="T">The type of the value contained in the result.</typeparam>
 [Serializable]
-public struct Result<T> : IEquatable<Result<T>>, IEquatable<FSharpResult<T, object>>, IComparable<Result<T>>, IComparable<FSharpResult<T, object>>
+public struct Result<T> : IResult<T>, IEquatable<IResult<T>>, IEquatable<FSharpResult<T, object>>, IComparable<IResult<T>>, IComparable<FSharpResult<T, object>>
 {
 	/// <summary>
 	/// Indicates whether operation associated with this result was successful.
